@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">tipСalculator</string>
+    <string name="sum_order">Enter the order amount</string>
+    <string name="sum_tip">Enter the tip amount</string>
+    <string name="res_sum_order">Order amount:</string>
+    <string name="res_sum_tip">Amount of tips:</string>
+    <string name="res_sum_total">Total:</string>
+</resources>

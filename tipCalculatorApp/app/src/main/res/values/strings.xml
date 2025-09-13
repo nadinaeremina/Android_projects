@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Калькулятор чаевых</string>
+    <string name="sum_order">Введите сумму заказа:</string>
+    <string name="sum_tip">Введите количество чаевых:</string>
+    <string name="res_sum_order">Сумма заказа:</string>
+    <string name="res_sum_tip">Количество чаевых:</string>
+    <string name="res_sum_total">Итого:</string>
+</resources>
