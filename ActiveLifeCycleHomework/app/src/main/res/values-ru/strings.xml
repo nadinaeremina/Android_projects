@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Активный жизненный цикл Домашка</string>
+    <string name="go_back">Вернуться назад</string>
+    <string name="open_activity">Открыть второе окно</string>
+    <string name="start">Я запустился!</string>
+    <string name="open_browser">Открыть браузер</string>
+</resources>

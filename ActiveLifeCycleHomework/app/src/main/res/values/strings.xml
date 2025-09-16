@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Active Life Cycle Homework</string>
+    <string name="open_activity">Open TwoActivity</string>
+    <string name="start">I started up!</string>
+    <string name="open_browser">Open Browser</string>
+    <string name="go_back">Go back</string>
+</resources>
