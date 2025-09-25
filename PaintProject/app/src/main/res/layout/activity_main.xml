@@ -23,20 +23,32 @@
             android:text="Color"/>
 
         <Button
-            android:id="@+id/clear"
+            android:id="@+id/smallerWidth"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:text="Clear"/>
+            android:text="Smaller"/>
 
         <Button
-            android:id="@+id/btnSave"
+            android:id="@+id/biggerWidth"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:text="save"/>
+            android:text="Bigger"/>
 
     </LinearLayout>
+
+    <Button
+        android:id="@+id/clear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clear"/>
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save"/>
 
     <com.example.paintproject.PaintView
         android:id="@+id/paintView"

@@ -15,6 +15,8 @@ public class MainActivity extends AppCompatActivity {
     Button saveButton;
     Button change;
     Button clear;
+    Button smallerWidth;
+    Button biggerWidth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +33,8 @@ public class MainActivity extends AppCompatActivity {
         saveButton = findViewById(R.id.btnSave);
         change = findViewById(R.id.btnColor);
         clear = findViewById(R.id.clear);
+        smallerWidth = findViewById(R.id.smallerWidth);
+        biggerWidth = findViewById(R.id.biggerWidth);
 
         saveButton.setOnClickListener(v->{
             paintView.saveToGallery(this);
@@ -42,6 +46,14 @@ public class MainActivity extends AppCompatActivity {
 
         change.setOnClickListener(v->{
             paintView.changeColor(change);
+        });
+
+        smallerWidth.setOnClickListener(v->{
+            paintView.smallerWidth(smallerWidth);
+        });
+
+        biggerWidth.setOnClickListener(v->{
+            paintView.biggerWidth(biggerWidth);
         });
     }
 }

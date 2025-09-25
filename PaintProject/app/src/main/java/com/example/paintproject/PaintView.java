@@ -86,6 +86,20 @@ public class PaintView extends View {
         invalidate();
     }
 
+    // увеличение толщины линии
+    public void biggerWidth(Button btn){
+        if (strokeWidth != 30) {
+            strokeWidth += 1;
+        }
+    }
+
+    // уменьшение толщины линии
+    public void smallerWidth(Button btn){
+        if (strokeWidth != 1) {
+            strokeWidth -= 1;
+        }
+    }
+
     // смена цвета
     public void changeColor(Button btn){
         Random random = new Random();
