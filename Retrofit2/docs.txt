@@ -1,0 +1,14 @@
+Открытая API погоды:
+https://home.openweathermap.org/
+
+Пароль от нее:
+pobziv-qomWe9-cyvqug
+
+Откуда брать responces (в каком формате и тд)
+https://www.jsonschema2pojo.org/
+
+Запрос:
+https://api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}
+
+Ключ:
+f425ebaf10358a96440ea8d6354f9452
