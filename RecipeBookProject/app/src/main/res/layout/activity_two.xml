@@ -9,28 +9,23 @@
     android:orientation="vertical"
     tools:context=".TwoActivity">
 
-    <ListView
-        android:id="@+id/categoriesList"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:choiceMode="multipleChoice"/>
-
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="50sp"/>
 
-    <Button
-        android:id="@+id/gobackButton"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:text="Go back"/>
+    <ListView
+        android:id="@+id/categoriesList"
+        android:layout_width="wrap_content"
+        android:layout_height="250sp"
+        android:choiceMode="multipleChoice"/>
 
     <Button
-        android:id="@+id/gotoButton"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:text="Go to list"/>
+        android:id="@+id/show"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Go to"
+        android:textSize="50sp"/>
 
 </LinearLayout>

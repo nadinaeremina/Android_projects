@@ -1,6 +1,7 @@
 package com.example.recipebookproject;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -15,14 +16,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.recyclerview.widget.RecyclerView;
+import java.util.ArrayList;
 
 public class TwoActivity extends AppCompatActivity {
 
-    Button gobackButton;
-    Button gotoButton;
     String[] categories = {"Salads", "Snacks", "Soups", "Main courses", "Desserts"};
-    ListView categoriesList;
     TextView textView;
+    Button show;
+    ListView categoriesList;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,10 +36,11 @@ public class TwoActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-        gobackButton = findViewById(R.id.gobackButton);
-        gotoButton = findViewById(R.id.gotoButton);
+
         categoriesList = findViewById(R.id.categoriesList);
         textView = findViewById(R.id.textView);
+        show = findViewById(R.id.show);
+
         // создаем адаптер для нашего списка
         // 1 - контекст (текущий), 2 - это готовый (встроенный layout), 3 - наш список
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this,
@@ -55,52 +59,17 @@ public class TwoActivity extends AppCompatActivity {
                 String selectedItem = categories[position];
 
                 // текст элемента вставляем в 'textView'
-                textView.setText("Выбрано: "+selectedItem);
-            }
-        });
-        gobackButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                //класс билдера для создания диалога
-                AlertDialog.Builder builder = new AlertDialog.Builder(TwoActivity.this);
-                //заголовок диалога
-                builder.setTitle("Подтверждение");
-                //иконка
-                builder.setIcon(R.drawable.ic_launcher_background);
-                //метод запрета на сворачивание диалога (опционально)
-                builder.setCancelable(false);
-                //сообщение пользователю
-                builder.setMessage("Вы уверены что хотите выйти?");
-
-                // 1
-                //кнопка согласия пользователя
-                builder.setPositiveButton("Да", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        finish();
-                    }
-                });
-
-                // 2
-                //кнопка отрицания пользователя
-                builder.setNegativeButton("Нет", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        // закрытие диалога
-                        dialogInterface.dismiss();
-                    }
-                });
-
-                //создание самого диалога и вывод на экран
-                AlertDialog dialog = builder.create();
-                dialog.show();
+                textView.setText(selectedItem);
             }
         });
 
-        gotoButton.setOnClickListener(new View.OnClickListener() {
+        show.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-
+            public void onClick(View v) {
+                Intent intent = new Intent(TwoActivity.this, ThirdActivity.class);
+                CharSequence selectedCategory = textView.getText();
+                intent.putExtra("SelectedCategory", selectedCategory);
+                startActivity(intent);
             }
         });
     }
